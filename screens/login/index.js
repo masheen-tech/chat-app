@@ -4,26 +4,11 @@ import { StyleSheet, Text, View } from 'react-native';
 import { Input, Button } from 'react-native-elements';
 import { auth } from "../../firebase";
 
-const Login = ({navigation}) => {
+const Login = () => {
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const openRegisterScreen = () => {
-    navigation.navigate('Register');
-  };
-  
-  const signin = () => {
-    signInWithEmailAndPassword(auth, email, password)
-      .then((userCredential) => {
-        navigation.navigate('Chat');
-      })
-      .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        alert(errorMessage);
-      });
-  };
 
   const handleLogin = async () => {
     signInWithEmailAndPassword(auth, email, password)
@@ -48,8 +33,8 @@ const Login = ({navigation}) => {
         onChangeText={text => setPassword(text)}
         secureTextEntry
       />
-      <Button title="sign in" style={styles.button} onPress={() => signin()} />
-      <Button title="register" style={styles.button} onPress={() => handleLogin()}/>
+      <Button title="sign in" style={styles.button} onPress={() => handleLogin()} />
+      {/* <Button title="register" style={styles.button} /> */}
     </View>
   );
 };
