@@ -1,10 +1,8 @@
 import React from "react";
-import { GiftedChat } from 'react-native-gifted-chat';
+import { GiftedChat } from "react-native-gifted-chat";
 
 const Chat = () => {
-    return  (
-      <GiftedChat  />
-    )
-  }
-  
+  return <GiftedChat />;
+};
+
 export default Chat;

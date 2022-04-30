@@ -1,7 +1,6 @@
 import Login from "./login";
-import Chat from "./Chat";
-import Setting from "./Setting";
+import Setting from "./setting";
+import Chat from "./chat";
+import ChatList from "./chatList";
 
-export { Login };
-export { Chat };
-export {Setting};
+export { Login, Setting, Chat, ChatList };

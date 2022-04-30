@@ -1,9 +1,7 @@
-import React,{createContext} from 'react'
+import React from 'react'
 
-const globalState = {
-    darkmode: false,
-}
+const AppContext = React.createContext();
+const AppConsumer = AppContext.Consumer;
+const AppProvider = AppContext.Provider;
 
-export const AppContext = React.createContext(globalState);
-export const AppConsumer = AppContext.Consumer;
-export const AppProvider = AppContext.Provider;
+export { AppContext, AppConsumer, AppProvider };
